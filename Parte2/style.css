@@ -1,42 +1,76 @@
 header {
 
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  
+      
+
 
 }
 
 
 h2 {
+  border:solid;
+    border-radius: 1px;
 
 }
 
 .nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 
 
   }
 
   li {
 
+    border:solid;
+    border-radius: 1px;
 
   }
 
   .content{
+    display:flex;
+    flex-direction: row;
+    flex: 50%;
 
 }
 
   .aside {
+    border:solid;
+    border-radius: 1px;
+    
 
   }
 
   .slidebox{
+
+    border:solid;
+    border-radius: 1px;
+    margin-bottom: 50px;
 
    
   }
 
   .article{
 
+    display:flex;
+    flex-direction: row;
+    flex: 50%;
+    margin:10px;
+
   }
 
 
 .poem{
+
+  border:solid;
+  border-radius: 1px;
+  align-items: center;
 
 }
 
@@ -44,11 +78,47 @@ h2 {
 /*Device = Tablets, Ipads (portrait)
   Screen = B/w 600px to 990px*/
   @media (min-width:600px) and (max-width: 990px)  {
-    .article {
+    .content {
+
+      display:flex;
+      flex-direction: row;
+      flex: 50%;
+      height: 300px;
 
   } 
+  .aside{
+    border:solid;
+    border-radius: 1px;
+    margin-left: 10px;
+
+  }
+  .slidebox{
+
+    border:solid;
+    border-radius: 1px;
+    margin-bottom: 50px;
+
+  }
+  .nav {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    
+  
+  
+    }
 header{
 
+  display: none;
+
+}
+.nav > li {
+
+  margin-right: 50px;
+  align-items: center;
+  
 }
 }
 
@@ -57,15 +127,27 @@ header{
 
 header,.content{
 
+  display: none;
+
 }
 
 .nav {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
 
 
   }
 
 
 .nav > li {
+
+  margin: 50px;
+  align-items: center;
+  border:solid;
+  border-radius: 1px;
 
 }
 

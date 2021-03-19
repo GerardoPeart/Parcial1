@@ -15,6 +15,14 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 */
 
 // CREA TU FUNCION mayusculas aqui:
+function Mayusculas(){
+
+for(let i = 0; i<9;i++){
+
+console.log(nombres[i].toUpperCase());
+
+}
+}
 
 
 
@@ -23,6 +31,20 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 */
 
 // CREA TU FUNCION numVocales aqui:
+function Vocales(palabra){
+    
+    let size = palabra.length;
+    let cont = 0;
+
+for(let i = 0; i< size;i++){
+
+if(palabra[i] == 'a' || palabra[i] == 'e' || palabra[i] == 'i'|| palabra[i] == 'o' || palabra[i] == 'u'){
+    cont++;
+}
+
+}
+console.log("datos: tiene "+ cont + " vocales , para cada elemento del arreglo");
+}
 
 
 /*
@@ -31,7 +53,30 @@ let nombres  = ['Jorge','Isabel','Juan','Pedro','Karina','Jose','Arturo','Rogeli
 
 // CREA TU FUNCION numVocalesArr aqui:
 
+function Vocales2(palabra){
+    
+    let size = palabra.length;
+    let cont = 0;
 
+for(let i = 0; i< size;i++){
+
+if(palabra[i] == 'a' || palabra[i] == 'e' || palabra[i] == 'i'|| palabra[i] == 'o' || palabra[i] == 'u'){
+    cont++;
+}
+
+}
+
+return cont;
+}
+
+function VocalesArreglo(areglo){
+    
+   let size = areglo.length;
+   for(let i = 0; i< size;i++){
+       console.log(areglo[i]+": tiene "+ Vocales2(areglo[i]) + " vocales");
+   }
+    
+}
 
 
 
@@ -43,13 +88,27 @@ A) Define un objeto tipo "Perro" que reciba 3 parametros
 1) Nombre
 2) Color
 3) Raza
-
-
+*/
+function Perro(nombre, color,raza) {
+    
+    this.nombre = nombre;
+    this.color = color;
+    this.raza = raza;
+    // body...
+}
+/*
 B) Crea 3 objectos  con diferentes valores
-
+*/
+var perro1 = new Perro("Tany","negro","pomeriano");
+var perro2 = new Perro("kimmy","cafe","Husky");
+var perro3 = new Perro("sammy","blanco","pomeriano");
+/*
 C) Con un console.log escribe el nombre del primer objeto, el color del segundo, y la raza del tercero. Lo puedes hacer en una sola línea o en 3 lineas aparte. 
-
-
+*/
+console.log(perro1.nombre);
+console.log(perro2.color);
+console.log(perro3.raza);
+/*
 *****BONUS****
 
 Crea una método en la definición del objeto "Perro" llamado printInfo()  que escriba en consola todas las propiedades del objeto que lo invoca. 
@@ -74,14 +133,15 @@ Deberia escribir en consola
  ***/
 
 // F1
+Mayusculas();
 
 
 // F2
-
+Vocales("datos");
 
 // F3
 
-
+VocalesArreglo(nombres);
 
 
 /***
